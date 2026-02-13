@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WebCraft – Professional Website Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+html{scroll-behavior:smooth}
+body{
+  min-height:100vh;
+  background:linear-gradient(-45deg,#eef2ff,#fdf2f8,#ecfeff,#ffffff);
+  background-size:400% 400%;
+  animation:bgMove 18s ease infinite;
+  color:#1f2937;
+}
+@keyframes bgMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+header{
+  padding:25px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(255,255,255,0.8);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+header h1{color:#4f46e5;font-size:28px}
+nav a{margin-left:25px;text-decoration:none;color:#1f2937;font-weight:500}
+.hero{padding:120px 60px;text-align:center}
+.hero h2{font-size:48px;margin-bottom:20px}
+.hero p{font-size:18px;max-width:700px;margin:auto;opacity:0.85}
+.hero button{
+  margin-top:30px;padding:14px 36px;border:none;
+  background:#4f46e5;color:white;font-size:16px;
+  border-radius:30px;cursor:pointer
+}
+.section{padding:80px 60px}
+.section h3{text-align:center;font-size:34px;margin-bottom:50px}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px
+}
+.card{
+  background:rgba(255,255,255,0.85);
+  padding:30px;border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  text-align:center
+}
+.card h4{margin-bottom:15px;font-size:22px}
+.price{font-size:32px;color:#4f46e5;margin:15px 0}
+.card ul{list-style:none;margin-top:15px}
+.card ul li{margin:8px 0}
+
+/* Reviews */
+.review-form{max-width:600px;margin:auto;text-align:center}
+.review-form input,.review-form textarea{
+  width:100%;padding:12px;margin:10px 0;
+  border-radius:10px;border:1px solid #ccc
+}
+.stars{font-size:28px;margin:10px 0;cursor:pointer}
+.stars span{color:#ccc}
+.stars .active{color:gold}
+.review-form button{
+  padding:12px 25px;border:none;
+  background:#4f46e5;color:white;
+  border-radius:25px;cursor:pointer
+}
+.reviews-container{margin-top:40px;display:grid;gap:20px}
+.review-box{
+  background:rgba(255,255,255,0.9);
+  padding:20px;border-radius:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08)
+}
+.review-stars{color:gold;margin-bottom:8px}
+
+.whatsapp-float{
+  position:fixed;bottom:25px;right:25px;
+  background:#25d366;color:white;
+  padding:14px 22px;border-radius:50px;
+  display:flex;align-items:center;gap:10px;
+  font-weight:600;text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25)
+}
+footer{text-align:center;padding:30px;background:rgba(255,255,255,0.85);margin-top:50px}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>WebCraft</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+    <a href="#reviews">Reviews</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h2>We Craft Websites That Build Trust</h2>
+  <p>WebCraft helps businesses create professional, modern and conversion-focused websites.</p>
+  <button onclick="location.href='#contact'">Get Started</button>
+</section>
+
+<section class="section" id="services">
+  <h3>Our Services</h3>
+  <div class="cards">
+    <div class="card"><h4>Business Website</h4><p>Professional websites for companies.</p></div>
+    <div class="card"><h4>E-Commerce</h4><p>Online stores with payments.</p></div>
+    <div class="card"><h4>Portfolio</h4><p>Personal & creative portfolios.</p></div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <h3>Pricing Plans</h3>
+  <div class="cards">
+    <div class="card"><h4>Basic</h4><div class="price">₹1999</div><ul><li>1 Page</li></ul></div>
+    <div class="card"><h4>Standard</h4><div class="price">₹2999</div><ul><li>5 Pages</li></ul></div>
+    <div class="card"><h4>Premium</h4><div class="price">₹4999</div><ul><li>10 Pages</li></ul></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <h3>Contact Us</h3>
+    <div class="cards">
+        <div class="card">
+            <h4>WhatsApp</h4>
+            <p>
+                <a href="https://wa.me/917023660826" target="_blank">Sumit Ojha</a><br>
+                <a href="https://wa.me/918290998295" target="_blank">Akshat Raj Mathur</a>
+            </p>
+        </div>
+
+        <div class="card">
+            <h4>Email</h4>
+            <p>
+                <a href="mailto:webcraft0826@gmail.com">webcraft0826@gmail.com</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="reviews">
+  <h3>Client Reviews</h3>
+
+  <div class="review-form">
+    <input id="reviewName" placeholder="Your Name">
+    <div class="stars" id="starRating">
+      <span onclick="setRating(1)">★</span>
+      <span onclick="setRating(2)">★</span>
+      <span onclick="setRating(3)">★</span>
+      <span onclick="setRating(4)">★</span>
+      <span onclick="setRating(5)">★</span>
+    </div>
+    <textarea id="reviewMessage" rows="4" placeholder="Write your review"></textarea>
+    <button onclick="addReview()">Submit Review</button>
+  </div>
+</section>
+
+<footer>©️ 2026 WebCraft</footer>
+
+<script>
+const WEB_APP_URL = "PASTE_YOUR_WEB_APP_URL_HERE";
+let selectedRating = 0;
+
+function setRating(r){
+  selectedRating = r;
+  document.querySelectorAll("#starRating span")
+    .forEach((s,i)=>s.classList.toggle("active",i<r));
+}
+
+function addReview(){
+  const name = reviewName.value.trim();
+  const msg = reviewMessage.value.trim();
+  if(!name || !msg || !selectedRating){
+    alert("Fill all fields");
+    return;
+  }
+
+  const url = `${"https://script.google.com/macros/s/AKfycbzi0Bp-KS2pmOFT-bpNQvRMVVjiaK2cQGmD2i7UiI2D2GkrVp66DvpS9duvr7RDsu5x/exec"}?name=${encodeURIComponent(name)}&rating=${selectedRating}&message=${encodeURIComponent(msg)}`;
+
+  fetch(url)
+    .then(r=>r.text())
+    .then(t=>{
+      if(t==="success"){
+        alert("Review saved!");
+        reviewName.value="";reviewMessage.value="";setRating(0);
+      }else alert("Error: "+t);
+    })
+    .catch(()=>alert("Network error"));
+}
+</script>
+
+</body>
+</html>
